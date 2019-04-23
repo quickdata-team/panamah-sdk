@@ -1,4 +1,4 @@
 module.exports = {
-    base:"./panamah-sdk/",
+    base:"/panamah-sdk/",
     dest:"docs"
 }
