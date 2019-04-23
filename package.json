@@ -1,0 +1,25 @@
+{
+  "name": "panamah-sdk",
+  "version": "1.0.0",
+  "description": "The panamah standard developer kit",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "vuepress": "^0.14.11"
+  },
+  "scripts": {
+    "dev":"vuepress dev",
+    "build":"vuepress build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/casamagalhaes/panamah-sdk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/casamagalhaes/panamah-sdk/issues"
+  },
+  "homepage": "https://github.com/casamagalhaes/panamah-sdk#readme"
+}
