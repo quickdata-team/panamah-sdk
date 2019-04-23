@@ -5,11 +5,12 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "cross-env": "^5.2.0",
     "vuepress": "^0.14.11"
   },
   "scripts": {
-    "dev":"vuepress dev",
-    "build":"vuepress build"
+    "dev": "cross-env NODE_ENV=development vuepress dev",
+    "build": "cross-env NODE_ENV=production vuepress build"
   },
   "repository": {
     "type": "git",

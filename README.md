@@ -1,3 +1,7 @@
+---
+home: true
+heroImage: /assets/img/panamah-sdk.png
+---
 # panamah-sdk
 
 The panamah standard developer kit
