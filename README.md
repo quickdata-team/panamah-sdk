@@ -7,10 +7,9 @@ footer: MIT Licensed | © Casa Magalhães
 
 The panamah standard developer kit
 
-## How to use the SDK
+## Como usar a SDK
 
-The SDK is available in various languages and counts with a simple and loosely
-coupled API.
+A SDK está disponível 
 
 See [overview](OVERVIEW.md) for more details.
 
