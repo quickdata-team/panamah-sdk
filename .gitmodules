@@ -4,6 +4,9 @@
 [submodule "panamah-sdk-delphi"]
 	path = panamah-sdk-delphi
 	url = https://github.com/casamagalhaes/panamah-sdk-delphi.git
+[submodule "panamah-sdk-java"]
+	path = panamah-sdk-java
+	url = https://github.com/casamagalhaes/panamah-sdk-java.git
 [submodule "panamah-sdk-javascript"]
 	path = panamah-sdk-javascript
 	url = https://github.com/casamagalhaes/panamah-sdk-javascript.git
