@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /assets/img/panamah-sdk.png
-footer: MIT Licensed | © Casas Magalhães
+footer: MIT Licensed | © Casa Magalhães
 ---
 # panamah-sdk
 
