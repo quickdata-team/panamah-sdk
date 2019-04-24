@@ -5,9 +5,9 @@ module.exports = {
   dest: "docs",
   themeConfig: {
     lastUpdated: true,
+    repo: "casamagalhaes/panamah-sdk",
     logo: "/assets/img/logo.png",
     nav: [
-      { text: "Github", link: "https://github.com/casamagalhaes/panamah-sdk" },
       { text: "Overview", link: "/OVERVIEW.md" },
       { text: "Guide", link: "/GUIDE.md" },
       { text: "FAQ", link: "/FAQ.md" },
@@ -17,7 +17,7 @@ module.exports = {
   },
   markdown: {
     config: md => {
-      md.use(require('markdown-it-task-lists'))
-    }
-  }
+      md.use(require("markdown-it-task-lists"));
+    },
+  },
 };

@@ -3,11 +3,12 @@
 - [x] Modelagem inicial
 - [x] Repositório de documentação
 - [x] Painel de atividades do projeto
-- [ ] Versão final do diagrama de fluxo
+- [x] Versão final do diagrama de fluxo
+- [ ] Geração do esquema
 - [ ] Implementação dos testes e cobertura
   - [ ] Javascript / mocha, istanbul
   - [ ] Java / junit, jacoco
-  - [ ] Delphi / _???_
+  - [ ] Delphi / DUnit, _???_
   - [ ] Python / pytest, pytest-cov
 - [ ] Implementação da API
   - [ ] Javascript
