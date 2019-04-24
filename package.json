@@ -6,6 +6,7 @@
   "dependencies": {},
   "devDependencies": {
     "cross-env": "^5.2.0",
+    "markdown-it-task-lists": "^2.1.1",
     "vuepress": "^0.14.11"
   },
   "scripts": {

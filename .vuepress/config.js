@@ -1,6 +1,6 @@
 module.exports = {
-  title: "Casa Magalhães - Panamah Standard Developer Kit",
-  description: "Various SDK implementations to consume the Panamah API",
+  title: "Panamah Software Developer Kit",
+  description: "Várias implementações do SDK para consumir a API do Panamah",
   base: process.env.NODE_ENV == "development" ? "/" : "/panamah-sdk/",
   dest: "docs",
   themeConfig: {
@@ -11,7 +11,13 @@ module.exports = {
       { text: "Overview", link: "/OVERVIEW.md" },
       { text: "Guide", link: "/GUIDE.md" },
       { text: "FAQ", link: "/FAQ.md" },
+      { text: "Roadmap", link: "/ROADMAP.md" },
       { text: "Início", link: "/" },
     ],
   },
+  markdown: {
+    config: md => {
+      md.use(require('markdown-it-task-lists'))
+    }
+  }
 };

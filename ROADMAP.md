@@ -1,0 +1,22 @@
+# Roadmap
+
+- [x] Modelagem inicial
+- [x] Repositório de documentação
+- [x] Painel de atividades do projeto
+- [ ] Versão final do diagrama de fluxo
+- [ ] Implementação dos testes e cobertura
+  - [ ] Javascript / mocha, istanbul
+  - [ ] Java / junit, jacoco
+  - [ ] Delphi / _???_
+  - [ ] Python / pytest, pytest-cov
+- [ ] Implementação da API
+  - [ ] Javascript
+  - [ ] Java
+  - [ ] Delphi
+  - [ ] Python
+- [ ] Publicação da SDK nos registros públicos
+  - [ ] Javascript / NPM
+  - [ ] Java / maven, bintray
+  - [ ] Delphi / _???_
+  - [ ] Python / PiPI
+- [ ] Aplicação de badges nos projetos / code climate
