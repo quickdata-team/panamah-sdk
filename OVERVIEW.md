@@ -1,6 +1,6 @@
 # Visão geral
 
-![sdk simple workflow](/assets/img/panamah-sdk-simple-flow.png)
+![sdk simple workflow](assets/img/panamah-sdk-simple-flow.png)
 
 Para consumir o serviço do Panamah é necessário que o desenvolvedor siga os
 seguintes passos:
