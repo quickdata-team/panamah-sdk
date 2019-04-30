@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /assets/img/panamah-sdk.png
+# heroImage: /assets/img/panamah-sdk-simple-flow.png
 footer: MIT Licensed | © Casa Magalhães
 ---
 
