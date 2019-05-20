@@ -34,9 +34,11 @@ O `PanamahStream` dispõe do método de `getPendingResources()` que retorna uma 
     - [Java](https://github.com/casamagalhaes/panamah-sdk-java)
     - [Javascript](https://github.com/casamagalhaes/panamah-sdk-javascript)
 3. No bootstrap da aplicação, chamar a função `init()` das APIs PanamahAdmin e PanamahStream
-
+    <style>.redblockquote blockquote { background: #ff000036; color: black; border-color: red; padding-top: 1px }</style>
+    <div class="redblockquote">
     > <sup>**Atenção:** O id do assinante deve ser um valor único, sendo recomendável o uso do CNPJ do assinante, assim como um controle externo para que o envio de dados não seja realizado em ambiente de homologação, por exemplo através da checagem de diretivas de compilação ou chave de uso.</sup>
-    
+    </div>
+
     > <sup>É possível criar um assinante usando o modelo PanamahAssinante com o método `createAssinante()` da API PanamahAdmin.</sup>
 4. Utilizar as funções `save()` e `delete()` da API PanamahStream com os modelos de dados para enviar ou remover informações do Panamah.
 5. Na finalização da aplicação, chamar a função `flush()` para garantir o envio de dados pendentes
