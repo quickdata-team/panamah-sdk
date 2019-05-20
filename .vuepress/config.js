@@ -1,7 +1,7 @@
 module.exports = {
   title: "Panamah SDK",
   description: " ",
-  base: process.env.NODE_ENV == "development" ? "/" : "/panamah-sdk/",
+  base: "/",
   dest: "docs",
   themeConfig: {
     lastUpdated: true,
