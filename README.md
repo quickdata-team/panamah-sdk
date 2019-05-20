@@ -4,17 +4,16 @@ home: true
 footer: MIT Licensed | © Casa Magalhães
 ---
 
-# panamah-sdk
+## O que é
 
-The panamah standard developer kit
+O PanamahSDK facilita o consumo dos serviços do Panamah em diversas linguagens, permitindo a manipulação e validação de dados, leitura de documentos fiscais e gerenciamento de assinantes de forma prática e segura.
 
-## Como usar a SDK
+## Plataformas
 
-A SDK está disponível em várias linguagens
+O SDK está disponível nas seguintes linguagens
 
-- [delphi](https://github.com/casamagalhaes/panamah-sdk-delphi)
-- [java](https://github.com/casamagalhaes/panamah-sdk-java)
-- [javascript](https://github.com/casamagalhaes/panamah-sdk-javascript)
-- [python](https://github.com/casamagalhaes/panamah-sdk-python)
+- [Delphi](https://github.com/casamagalhaes/panamah-sdk-delphi)
+- [Java](https://github.com/casamagalhaes/panamah-sdk-java)
+- [Javascript](https://github.com/casamagalhaes/panamah-sdk-javascript)
 
-Veja a [visão geral](OVERVIEW.md) para mais detalhes.
+Veja [visão geral](OVERVIEW.md) para mais detalhes

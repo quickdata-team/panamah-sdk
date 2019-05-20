@@ -1,3 +1,5 @@
-# Guia Básico
+# Exemplos de uso
 
-Para usar a SDK você deve baixar um dos clientes disponíveis nos registros públicos
+* [Em Delphi](https://github.com/casamagalhaes/panamah-sdk-delphi/wiki/Exemplo-de-uso)
+
+* [Em Javascript](https://github.com/casamagalhaes/panamah-sdk-javascript/wiki/Exemplo-de-uso)

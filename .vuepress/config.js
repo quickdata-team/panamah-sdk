@@ -1,6 +1,6 @@
 module.exports = {
-  title: "Panamah Software Developer Kit",
-  description: "Várias implementações do SDK para consumir a API do Panamah",
+  title: "Panamah SDK",
+  description: " ",
   base: process.env.NODE_ENV == "development" ? "/" : "/panamah-sdk/",
   dest: "docs",
   themeConfig: {
@@ -8,11 +8,9 @@ module.exports = {
     repo: "casamagalhaes/panamah-sdk",
     logo: "/assets/img/logo.png",
     nav: [
-      { text: "Overview", link: "/OVERVIEW.md" },
-      { text: "Guide", link: "/GUIDE.md" },
-      { text: "FAQ", link: "/FAQ.md" },
-      { text: "Roadmap", link: "/ROADMAP.md" },
       { text: "Início", link: "/" },
+      { text: "Visão geral", link: "/OVERVIEW.md" },
+      { text: "Exemplos de uso", link: "/GUIDE.md" }
     ],
   },
   markdown: {
