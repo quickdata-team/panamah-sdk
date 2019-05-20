@@ -5,7 +5,6 @@ module.exports = {
   dest: "docs",
   themeConfig: {
     lastUpdated: true,
-    repo: "casamagalhaes/panamah-sdk",
     logo: "/assets/img/logo.png",
     nav: [
       { text: "Início", link: "/" },
