@@ -18,3 +18,4 @@ O SDK está disponível nas seguintes linguagens
 - [Python](https://github.com/casamagalhaes/panamah-sdk-python)
 
 Veja [visão geral](OVERVIEW.md) para mais detalhes
+
