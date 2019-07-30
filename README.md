@@ -15,5 +15,6 @@ O SDK está disponível nas seguintes linguagens
 - [Delphi](https://github.com/casamagalhaes/panamah-sdk-delphi)
 - [Java](https://github.com/casamagalhaes/panamah-sdk-java)
 - [Javascript](https://github.com/casamagalhaes/panamah-sdk-javascript)
+- [Python](https://github.com/casamagalhaes/panamah-sdk-python)
 
 Veja [visão geral](OVERVIEW.md) para mais detalhes
