@@ -36,11 +36,10 @@ O `PanamahStream` dispõe do método de `getPendingResources()` que retorna uma 
     - [Javascript](https://github.com/quickdata-team/panamah-sdk-javascript)
     - [Python](https://github.com/quickdata-team/panamah-sdk-python)
 3. No bootstrap da aplicação, chamar a função `init()` das APIs PanamahAdmin e PanamahStream
-    <div class="redblockquote">
-    > <sup>**Atenção:** O id do assinante deve ser um valor único, sendo recomendável o uso do CNPJ do assinante, assim como um controle externo para que o envio de dados não seja realizado em ambiente de homologação, por exemplo através da checagem de diretivas de compilação ou chave de uso.</sup>
-    </div>
+    
+    > **Atenção:** O id do assinante deve ser um valor único, sendo recomendável o uso do CNPJ do assinante, assim como um controle externo para que o envio de dados não seja realizado em ambiente de homologação, por exemplo através da checagem de diretivas de compilação ou chave de uso.
 
-    > <sup>É possível criar um assinante usando o modelo PanamahAssinante com o método `createAssinante()` da API PanamahAdmin.</sup>
+    > É possível criar um assinante usando o modelo PanamahAssinante com o método `createAssinante()` da API PanamahAdmin.
 4. Utilizar as funções `save()` e `delete()` da API PanamahStream com os modelos de dados para enviar ou remover informações do Panamah.
 5. Na finalização da aplicação, chamar a função `flush()` para garantir o envio de dados pendentes
 
