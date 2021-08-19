@@ -1,7 +1,7 @@
 ---
 home: true
 # heroImage: /assets/img/panamah-sdk-simple-flow.png
-footer: MIT Licensed | © Casa Magalhães
+footer: MIT Licensed | © QuickData
 ---
 
 ## O que é
@@ -12,10 +12,10 @@ O PanamahSDK facilita o consumo dos serviços do Panamah em diversas linguagens,
 
 O SDK está disponível nas seguintes linguagens
 
-- [Delphi](https://github.com/casamagalhaes/panamah-sdk-delphi)
-- [Java](https://github.com/casamagalhaes/panamah-sdk-java)
-- [Javascript](https://github.com/casamagalhaes/panamah-sdk-javascript)
-- [Python](https://github.com/casamagalhaes/panamah-sdk-python)
+- [Delphi](https://github.com/quickdata-team/panamah-sdk-delphi)
+- [Java](https://github.com/quickdata-team/panamah-sdk-java)
+- [Javascript](https://github.com/quickdata-team/panamah-sdk-javascript)
+- [Python](https://github.com/quickdata-team/panamah-sdk-python)
 
 Veja [visão geral](OVERVIEW.md) para mais detalhes
 

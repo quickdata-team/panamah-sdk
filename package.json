@@ -7,7 +7,7 @@
   "devDependencies": {
     "cross-env": "^5.2.0",
     "markdown-it-task-lists": "^2.1.1",
-    "vuepress": "^0.14.11"
+    "vuepress": "^1.8.2"
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development vuepress dev",
@@ -15,13 +15,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/casamagalhaes/panamah-sdk.git"
+    "url": "git+https://github.com/quickdata-team/panamah-sdk.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/casamagalhaes/panamah-sdk/issues"
+    "url": "https://github.com/quickdata-team/panamah-sdk/issues"
   },
-  "homepage": "https://github.com/casamagalhaes/panamah-sdk#readme"
+  "homepage": "https://github.com/quickdata-team/panamah-sdk#readme"
 }

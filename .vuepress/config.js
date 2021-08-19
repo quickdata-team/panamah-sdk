@@ -5,7 +5,7 @@ module.exports = {
   dest: "docs",
   themeConfig: {
     lastUpdated: true,
-    logo: "/assets/img/logo.png",
+    logo: "/assets/img/logo-qd.png",
     nav: [
       { text: "Início", link: "/" },
       { text: "Visão geral", link: "/OVERVIEW.md" },

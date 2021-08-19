@@ -20,9 +20,9 @@ O fluxo de envio dos dados pelo `PanamahStream` se dá de forma contínua após 
 
 ## Hooks e eventos
 Eventos são disparados antes de salvar ou deletar modelos e quando erros no processamento assíncrono acontecem. Esses eventos servem para facilitar a validação e complemento de dados, bem como tratar situações inesperadas:
-- [Delphi](https://github.com/casamagalhaes/panamah-sdk-delphi/wiki/Vis%C3%A3o-geral#Hooks-e-eventos)
-- [Javascript](https://github.com/casamagalhaes/panamah-sdk-javascript/wiki/Vis%C3%A3o-geral#Hooks-e-eventos)
-- [Python](https://github.com/casamagalhaes/panamah-sdk-python/wiki/Vis%C3%A3o-geral#Hooks-e-eventos)
+- [Delphi](https://github.com/quickdata-team/panamah-sdk-delphi/wiki/Vis%C3%A3o-geral#Hooks-e-eventos)
+- [Javascript](https://github.com/quickdata-team/panamah-sdk-javascript/wiki/Vis%C3%A3o-geral#Hooks-e-eventos)
+- [Python](https://github.com/quickdata-team/panamah-sdk-python/wiki/Vis%C3%A3o-geral#Hooks-e-eventos)
 
 ## Tratando recursos pendentes
 O `PanamahStream` dispõe do método de `getPendingResources()` que retorna uma lista de modelos cujos dados completos não foram enviados para o Panamah, porém foram referenciados por modelos enviados anteriormente. Por exemplo: um produto Coca-Cola (id: 111) pertence a seção Bebidas (id: 999). Este produto foi salvo utilizando o modelo `PanamahProduto` com a devida propriedade secaoId preenchida com 999, por motivo indeterminado, o serviço do parceiro não enviou a seção Bebidas (999) usando o modelo `PanamahSecao`. Executando o método `getPendingResources()`, uma lista contendo apenas um modelo `PanamahSecao` seria retornada com somente a propriedade id preenchida com 999. Caberia ao software do parceiro percorrer a lista, preencher o restante dos dados e salvar os modelos com o `PanamahStream`.
@@ -31,12 +31,11 @@ O `PanamahStream` dispõe do método de `getPendingResources()` que retorna uma 
 
 1. Obter os tokens de autenticação: AuthorizationToken e Secret.
 2. Fazer a instalação da biblioteca específica da linguagem da sua aplicação
-    - [Delphi](https://github.com/casamagalhaes/panamah-sdk-delphi)
-    - [Java](https://github.com/casamagalhaes/panamah-sdk-java)
-    - [Javascript](https://github.com/casamagalhaes/panamah-sdk-javascript)
-    - [Python](https://github.com/casamagalhaes/panamah-sdk-python)
+    - [Delphi](https://github.com/quickdata-team/panamah-sdk-delphi)
+    - [Java](https://github.com/quickdata-team/panamah-sdk-java)
+    - [Javascript](https://github.com/quickdata-team/panamah-sdk-javascript)
+    - [Python](https://github.com/quickdata-team/panamah-sdk-python)
 3. No bootstrap da aplicação, chamar a função `init()` das APIs PanamahAdmin e PanamahStream
-    <style>.redblockquote blockquote { background: #ff000036; color: black; border-color: red; padding-top: 1px }</style>
     <div class="redblockquote">
     > <sup>**Atenção:** O id do assinante deve ser um valor único, sendo recomendável o uso do CNPJ do assinante, assim como um controle externo para que o envio de dados não seja realizado em ambiente de homologação, por exemplo através da checagem de diretivas de compilação ou chave de uso.</sup>
     </div>
@@ -49,7 +48,7 @@ O `PanamahStream` dispõe do método de `getPendingResources()` que retorna uma 
 
 - [Exemplos de uso](GUIDE.md)
 - [Repositórios das bibliotecas](README.md#Plataformas)
-- [Wiki PanamahSDK Delphi](https://github.com/casamagalhaes/panamah-sdk-delphi/wiki)
-- [Wiki PanamahSDK Java](https://github.com/casamagalhaes/panamah-sdk-java/wiki)
-- [Wiki PanamahSDK Javascript](https://github.com/casamagalhaes/panamah-sdk-javascript/wiki)
-- [Wiki PanamahSDK Python](https://github.com/casamagalhaes/panamah-sdk-python/wiki)
+- [Wiki PanamahSDK Delphi](https://github.com/quickdata-team/panamah-sdk-delphi/wiki)
+- [Wiki PanamahSDK Java](https://github.com/quickdata-team/panamah-sdk-java/wiki)
+- [Wiki PanamahSDK Javascript](https://github.com/quickdata-team/panamah-sdk-javascript/wiki)
+- [Wiki PanamahSDK Python](https://github.com/quickdata-team/panamah-sdk-python/wiki)
