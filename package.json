@@ -10,8 +10,8 @@
     "vuepress": "^0.14.11"
   },
   "scripts": {
-    "dev": "cross-env NODE_ENV=development npx vuepress dev",
-    "build": "cross-env NODE_ENV=production npx vuepress build"
+    "dev": "cross-env NODE_ENV=development vuepress dev",
+    "build": "cross-env NODE_ENV=production vuepress build"
   },
   "repository": {
     "type": "git",

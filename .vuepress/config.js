@@ -1,7 +1,7 @@
 module.exports = {
   title: "Panamah SDK",
   description: " ",
-  base: "/",
+  base: "/panamah-sdk/",
   dest: "docs",
   themeConfig: {
     lastUpdated: true,
