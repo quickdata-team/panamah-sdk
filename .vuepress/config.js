@@ -3,6 +3,9 @@ module.exports = {
   description: " ",
   base: "/panamah-sdk/",
   dest: "docs",
+  head: [
+    ['link', { rel: "shortcut icon", href: "/assets/img/favicon.ico"}],
+  ],
   themeConfig: {
     lastUpdated: true,
     logo: "/assets/img/logo-qd.png",
