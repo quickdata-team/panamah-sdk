@@ -1,7 +1,7 @@
 module.exports = {
   title: "Panamah SDK",
   description: " ",
-  base: "/panamah-sdk/",
+  base: "/",
   dest: "docs",
   head: [
     ['link', { rel: "shortcut icon", href: "/assets/img/favicon.ico"}],
