@@ -43,6 +43,10 @@ O `PanamahStream` dispõe do método de `getPendingResources()` que retorna uma 
 4. Utilizar as funções `save()` e `delete()` da API PanamahStream com os modelos de dados para enviar ou remover informações do Panamah.
 5. Na finalização da aplicação, chamar a função `flush()` para garantir o envio de dados pendentes
 
+## Diagrama UML
+
+![panamah-sdk-uml](assets/img/panamah-sdk-uml.jpg)
+
 ## Mais informações
 
 - [Exemplos de uso](GUIDE.md)
