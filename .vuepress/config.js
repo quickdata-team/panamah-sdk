@@ -12,6 +12,8 @@ module.exports = {
     nav: [
       { text: "Início", link: "/" },
       { text: "Visão geral", link: "/OVERVIEW.md" },
+      { text: "Boas práticas", link: "/BEST_PRATICES.md" },
+      { text: "Modelo de dados", link: "/DATA_MODEL.md" },
       { text: "Exemplos de uso", link: "/GUIDE.md" }
     ],
   },
