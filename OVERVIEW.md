@@ -15,6 +15,35 @@ O PanamahSDK é dividido em três partes: `PanamahStream`, `PanamahAdmin` e os m
 ## Credenciais e tokens
 Todos os parceiros recebem um par de tokens de autenticação chamados `AuthorizationToken` e `Secret`, que são usados para autorizar o uso das APIs do SDK. Esses tokens devem ser mantidos de forma segura, sob o risco de uso indevido por terceiros.
 
+Para obter os tokens de autenticação, o AuthorizationToken e o Secret, você precisa seguir os seguintes passos:
+
+1. Entre em contato com a equipe responsável pela QuickData para solicitar os tokens de autenticação necessários.
+2. Após receber os tokens, defina-os como variáveis de ambiente em seu ambiente de desenvolvimento ou sistema operacional. Para fazer isso, siga as etapas relevantes ao seu ambiente:
+
+   - **Windows**:
+     - Abra o Painel de Controle e acesse as Configurações do Sistema.
+     - Clique em "Variáveis de Ambiente".
+     - Em "Variáveis do Usuário", clique em "Novo" para adicionar uma nova variável.
+     - Defina o nome da variável como "PANAMAH_AUTHORIZATION_TOKEN" e insira o valor do AuthorizationToken fornecido.
+     - Repita o processo para adicionar a variável "PANAMAH_SECRET" com o valor do Secret fornecido.
+     - Salve as alterações e feche as janelas do Painel de Controle.
+
+   - **Linux / macOS**:
+     - Abra o terminal.
+     - Defina a variável de ambiente PANAMAH_AUTHORIZATION_TOKEN usando o comando:
+       ```sh
+       export PANAMAH_AUTHORIZATION_TOKEN=seu_token_aqui
+       ```
+     - Defina a variável de ambiente PANAMAH_SECRET usando o comando:
+       ```sh
+       export PANAMAH_SECRET=sua_chave_aqui
+       ```
+     - Certifique-se de substituir "seu_token_aqui" e "sua_chave_aqui" pelos tokens fornecidos.
+
+3. Ao definir as variáveis de ambiente, você poderá acessá-las em seu código ou aplicação usando a respectiva notação de acesso às variáveis de ambiente da sua linguagem de programação.
+
+Certifique-se de que as variáveis de ambiente PANAMAH_AUTHORIZATION_TOKEN e PANAMAH_SECRET estejam corretamente configuradas antes de executar seu código ou aplicação que faça uso dos serviços da QuickData. Isso garantirá a autenticação adequada e o acesso aos recursos necessários.
+
 ## Execução contínua do PanamahStream
 O fluxo de envio dos dados pelo `PanamahStream` se dá de forma contínua após a sua inicialização pelo método `init()` que recebe os tokens de autenticação e o id do assinante. Esse fluxo é executado assincronamente por thread ou agendamento de execução por intervalo no caso do javascript. Operações de salvamento ou deleção são escritas no disco em lotes que tem limite de tempo (5 minutos) e tamanho (5 KB). Quando atingido qualquer limite, uma requisição contendo as operações é disparada para o servidor. Devido a natureza assíncrona do fluxo de envios, é essencial que o método `flush()` seja chamado no fim da execução da aplicação, evitando que dados que foram salvos no lote corrente e ainda não atingiram um limite, sejam enviados apenas na próxima execução da aplicação.
 
