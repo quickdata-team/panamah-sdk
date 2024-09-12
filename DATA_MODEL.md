@@ -266,32 +266,33 @@
 
 ## VENDA
 
-| Campo                     | Tipo             | Obrigatório        | Observações |
-|---------------------------|------------------|--------------------|-------------|
-| id                        | string           | :heavy_check_mark: |             |
-| lojaId                    | string           | :heavy_check_mark: |             |
-| clienteId                 | string           |                    |             |
-| funcionarioId             | string           |                    |             |
-| data                      | date             | :heavy_check_mark: |             |
-| dataHoraInicio            | date             |                    |             |
-| dataHoraFim               | date             |                    |             |
-| dataHoraVenda             | date             | :heavy_check_mark: |             |
-| desconto                  | number           |                    |             |
-| efetiva                   | boolean          | :heavy_check_mark: |             |
-| quantidadeItens           | number           | :heavy_check_mark: |             |
-| quantidadeItensCancelados | number           |                    |             |
-| sequencial                | string           | :heavy_check_mark: |             |
-| servico                   | number           |                    |             |
-| tipoDesconto              | string           |                    |             |
-| tipoPreco                 | string           | :heavy_check_mark: |             |
-| valor                     | number           | :heavy_check_mark: |             |
-| valorItensCancelados      | number           |                    |             |
-| acrescimo                 | number           |                    |             |
-| numeroCaixa               | string           |                    |             |
-| chave                     | string           |                    |             |
-| xml                       | base64           |                    |             |
-| itens                     | list[Itens]      | :heavy_check_mark: |             |
-| pagamentos                | list[Pagamentos] | :heavy_check_mark: |             |
+| Campo                     | Tipo             | Obrigatório        | Observações                |
+|---------------------------|------------------|--------------------|----------------------------|
+| id                        | string           | :heavy_check_mark: |                            |
+| lojaId                    | string           | :heavy_check_mark: |                            |
+| cnpj                      | string           | :warning:          | Obrigatório no Java SDK    |
+| clienteId                 | string           |                    |                            |
+| funcionarioId             | string           |                    |                            |
+| data                      | date             | :heavy_check_mark: |                            |
+| dataHoraInicio            | date             |                    |                            |
+| dataHoraFim               | date             |                    |                            |
+| dataHoraVenda             | date             | :heavy_check_mark: |                            |
+| desconto                  | number           |                    |                            |
+| efetiva                   | boolean          | :heavy_check_mark: |                            |
+| quantidadeItens           | number           | :heavy_check_mark: |                            |
+| quantidadeItensCancelados | number           |                    |                            |
+| sequencial                | string           | :heavy_check_mark: |                            |
+| servico                   | number           |                    |                            |
+| tipoDesconto              | string           |                    |                            |
+| tipoPreco                 | string           | :heavy_check_mark: |                            |
+| valor                     | number           | :heavy_check_mark: |                            |
+| valorItensCancelados      | number           |                    |                            |
+| acrescimo                 | number           |                    |                            |
+| numeroCaixa               | string           |                    |                            |
+| chave                     | string           |                    |                            |
+| xml                       | base64           |                    |                            |
+| itens                     | list[Itens]      | :heavy_check_mark: |                            |
+| pagamentos                | list[Pagamentos] | :heavy_check_mark: |                            |
 
 ### Itens
 
@@ -300,6 +301,8 @@
 | acrescimo        | número   |                    |                                                             |
 | desconto         | número   |                    |                                                             |
 | efetivo          | booleano | :heavy_check_mark: |                                                             |
+| gtin             | string   | :warning:          | Obrigatório no Java SDK                                     |
+| descricao        | string   | :warning:          | Obrigatório no Java SDK                                     |
 | funcionarioId    | string   |                    |                                                             |
 | preco            | número   | :heavy_check_mark: |                                                             |
 | produtoId        | string   | :heavy_check_mark: |                                                             |
@@ -317,11 +320,12 @@
 ### Pagamentos
 
 
-| Campo            | Tipo   | Obrigatório        | Observações                                             |
-|------------------|--------|--------------------|---------------------------------------------------------|
-| formaPagamentoId | string | :heavy_check_mark: |                                                         |
-| sequencial       | string | :heavy_check_mark: |                                                         |
-| valor            | número | :heavy_check_mark: | Valor máximo: 999999999.99, Valor mínimo: -999999999.99 |
+| Campo               | Tipo   | Obrigatório        | Observações                                             |
+|---------------------|--------|--------------------|---------------------------------------------------------|
+| formaPagamentoId    | string | :heavy_check_mark: |                                                         |
+| formaPagamentoSefaz | string |                    |                                                         |
+| sequencial          | string | :heavy_check_mark: |                                                         |
+| valor               | número | :heavy_check_mark: | Valor máximo: 999999999.99, Valor mínimo: -999999999.99 |
 
 
 ## COMPRA
