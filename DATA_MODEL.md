@@ -323,7 +323,7 @@
 | Campo               | Tipo   | Obrigatório        | Observações                                             |
 |---------------------|--------|--------------------|---------------------------------------------------------|
 | formaPagamentoId    | string | :heavy_check_mark: |                                                         |
-| formaPagamentoSefaz | string |                    |                                                         |
+| tipoPagamentoSefaz  | string |                    |                                                         |
 | sequencial          | string | :heavy_check_mark: |                                                         |
 | valor               | número | :heavy_check_mark: | Valor máximo: 999999999.99, Valor mínimo: -999999999.99 |
 
