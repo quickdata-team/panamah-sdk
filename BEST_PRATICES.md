@@ -30,6 +30,150 @@ A seguir, apresentamos um conjunto de práticas recomendadas pela QuickData. Seg
 
 - Após o envio dos dados, leva-se aproximadamente de 15 a 20 minutos para que sejam processados.
 
+### 2.3 - Envio de dados pendentes
+
+É possível consultar e enviar **dados pendentes** que ainda não foram processados com sucesso pela API Panamah.
+Atualmente, essa funcionalidade está disponível apenas para **produtos**.
+
+Como o envio dos modelos de dados é independente e ocorre de forma assíncrona, pode acontecer de os dados de venda ficarem incompletos, justamente porque os produtos correspondentes ainda não foram processados.
+
+A função de envio de dados pendentes é importante justamente para atenuar esses problemas e garantir que as informações de venda fiquem o mais completas possível.
+Por isso, é necessário acionar esse recurso periodicamente.
+
+Os dados pendentes podem ser consultados:
+
+* **Via SDKs** (Delphi, Java e JavaScript)
+* **Via Panamah [API core](https://core-docs.panamah.io/#operation/getPendingResources)**
+
+A resposta sempre retorna uma lista de pendências organizadas por **assinante** e **tipo de recurso** (ex.: `PRODUTO`).
+Cada item contém:
+
+* `assinanteId` → Identificador do assinante que possui pendências
+* `models` ou `ids` → Lista de modelos ou identificadores dos recursos pendentes (normalmente produtos ainda não sincronizados)
+
+Esses objetos podem ser usados para:
+
+* Conferir quais registros ainda não foram enviados
+* Reprocessar/envia-los novamente
+* Monitorar consistência dos dados entre sua base e a Panamah
+
+---
+
+#### 2.3.1 - Delphi
+
+1. Obtenha a instância do stream:
+
+   ```pascal
+   var Stream := TPanamahStream.GetInstance;
+   ```
+
+2. Configure um callback de erro, se desejar:
+
+   ```pascal
+   Stream.OnError := procedure(E: Exception)
+   begin
+     Writeln('Erro: ' + E.Message);
+   end;
+   ```
+
+3. Inicialize o SDK:
+
+   ```pascal
+   Stream.Init(authorizationToken, secret, assinanteId);
+   ```
+
+4. Busque as pendências:
+
+   ```pascal
+   var Pending := Stream.GetPendingResources;
+   ```
+
+5. Itere sobre os resultados:
+
+   ```pascal
+   for I := 0 to Pending.Count - 1 do
+   begin
+     var Group := Pending.PendingResources[I];
+     for J := 0 to Group.Count - 1 do
+     begin
+       var Model := Group[J];
+       Writeln(Model.SerializeToJSON); // inspeciona o id ou todo o JSON do produto pendente
+     end;
+   end;
+   ```
+
+---
+
+#### 2.3.2 - Java
+
+1. Configure e autentique:
+
+   ```java
+   PanamahConfig config = PanamahConfig.fromEnv("staging");
+   PanamahUtil.auth(config);
+   ```
+
+2. Obtenha pendências (paginado):
+
+   ```java
+   Map<String, PanamahPendencias> pendencias = PanamahUtil.pending(config, 0, 100);
+   ```
+
+3. Percorra os assinantes e tipos:
+
+   ```java
+   for (Map.Entry<String, PanamahPendencias> entry : pendencias.entrySet()) {
+       String assinanteId = entry.getKey();
+       PanamahPendencias lista = entry.getValue();
+       
+       System.out.println("Assinante: " + assinanteId);
+       for (String idProduto : lista.getProdutos()) {
+           System.out.println("Produto pendente: " + idProduto);
+           // aqui você pode reenviar esse produto para o stream
+       }
+   }
+   ```
+
+> ⚠️ Caso a autenticação expire, o SDK automaticamente renova o token e repete a requisição.
+
+---
+
+#### 2.3.3 - JavaScript
+
+1. Inicialize o stream (single-tenant ou multi-tenant):
+
+   ```javascript
+   await PanamahStream.init({
+     authorizationToken,
+     secret,
+     assinanteId // ou omita em multi-tenant
+   });
+   ```
+
+2. Busque pendências:
+
+   ```javascript
+   const pendencias = await PanamahStream.getPendingResources();
+   ```
+
+3. Itere e processe os modelos:
+
+   ```javascript
+   pendencias.forEach(p => {
+     console.log("Assinante:", p.assinanteId);
+     p.models.forEach(model => {
+       console.log("Produto pendente:", model.id);
+       // Exemplo: reenviar manualmente ou logar para auditoria
+     });
+   });
+   ```
+
+4. Finalize garantindo envio/limpeza de buffer:
+
+   ```javascript
+   await PanamahStream.flush();
+   ```
+
 ## 3 - Portal do parceiro
 
 ### 3.1 - Acesso ao portal
