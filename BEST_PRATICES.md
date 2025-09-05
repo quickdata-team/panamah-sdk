@@ -35,7 +35,7 @@ A seguir, apresentamos um conjunto de práticas recomendadas pela QuickData. Seg
 É possível consultar e enviar **dados pendentes** que ainda não foram processados com sucesso pela API Panamah.
 Atualmente, essa funcionalidade está disponível apenas para **produtos**.
 
-Como o envio dos modelos de dados é independente e ocorre de forma assíncrona, pode acontecer de os dados de venda ficarem incompletos, justamente porque os produtos correspondentes ainda não foram processados.
+Como o envio dos diferentes modelos de dados é independente e ocorre de forma assíncrona, pode acontecer de os dados de venda ficarem incompletos no servidor se um ou mais produtos relacionados ainda não tiverem sido enviados. Essa chamada permite identificar e enviar esses produtos pendentes, garantindo que as vendas fiquem completas.
 
 A função de envio de dados pendentes é importante justamente para atenuar esses problemas e garantir que as informações de venda fiquem o mais completas possível.
 Por isso, é necessário acionar esse recurso periodicamente.
